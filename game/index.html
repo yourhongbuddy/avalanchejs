@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avalanche Escape - Dodge the Falling Snow!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <header>
+            <h1>🏔️ Avalanche Escape</h1>
+            <div class="score-board">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="level">Level: <span id="level">1</span></div>
+                <div class="lives">Lives: <span id="lives">3</span></div>
+            </div>
+        </header>
+        
+        <div class="game-area">
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            
+            <div class="game-overlay" id="gameOverlay">
+                <div class="menu" id="startMenu">
+                    <h2>Welcome to Avalanche Escape!</h2>
+                    <p>Use ARROW KEYS or WASD to move your skier</p>
+                    <p>Dodge the falling snow and rocks!</p>
+                    <button id="startBtn" class="btn">Start Game</button>
+                </div>
+                
+                <div class="menu hidden" id="pauseMenu">
+                    <h2>Game Paused</h2>
+                    <button id="resumeBtn" class="btn">Resume</button>
+                    <button id="restartBtn" class="btn">Restart</button>
+                </div>
+                
+                <div class="menu hidden" id="gameOverMenu">
+                    <h2>Game Over!</h2>
+                    <p>Final Score: <span id="finalScore">0</span></p>
+                    <p>Level Reached: <span id="finalLevel">1</span></p>
+                    <button id="playAgainBtn" class="btn">Play Again</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="controls">
+            <div class="control-info">
+                <h3>Controls:</h3>
+                <p>🎮 Arrow Keys or WASD to move</p>
+                <p>⏸️ SPACE to pause</p>
+                <p>🔄 R to restart</p>
+            </div>
+            
+            <div class="mobile-controls" id="mobileControls">
+                <button class="mobile-btn" id="leftBtn">⬅️</button>
+                <button class="mobile-btn" id="upBtn">⬆️</button>
+                <button class="mobile-btn" id="downBtn">⬇️</button>
+                <button class="mobile-btn" id="rightBtn">➡️</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
